@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Predict Loan Defualt Risk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                    <img src="..\static\p4.jpg" alt="SB" height="130" width="400" >
+            </div>
+            <br>
+            <div class="col-sm-6">
+                    <h1 ><center><b>Decisioning Model-Loan Portfolio</b></center></h1>
+                    
+                    <br>
+                    <form method=post enctype=multipart/form-data>
+            </div>
+            <div class="col-sm-2">
+            </div>
+            </div>
+            <div class="row">
+                <nav class="navbar navbar-inverse "> 
+                    <div role="navigation"> 
+                      <div class="container"> 
+                        <div class="navbar-header"> 
+                          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse"> 
+                            <span class="sr-only">Toggle navigation</span> 
+                            <span class="icon-bar"></span> 
+                            <span class="icon-bar"></span> 
+                            <span class="icon-bar"></span> 
+                          </button> 
+                          <a href="#" class="navbar-brand"></a> 
+                        </div> 
+                        <div class="navbar-collapse collapse"> 
+                          <ul class="nav navbar-nav navbar-right"> 
+                              <li ><a href="#"></a></li> 
+                              <li> <a href="#"></a> </li> 
+                              <li><a href="#"></a> </li> 
+                          </ul> 
+                        </div> 
+                      </div> 
+                        
+                    </div> 
+                    </nav> 
+                </div>
+                
+                
+            <div class="row">
+                 
+                    <div class="col-sm-12">
+                            <h3>This model will predict the percentage of <i style ="color: green;">
+                             Good Loans</i> and <i style= "color:red;"> Bad Loans</i> present in portfolio</h3>
+                    </div>
+                </div>
+    
+    <div class="row">
+       
+        <div class="col-sm-6">
+            <h4>Please upload a loan portfolio to predict the loan behaviour!!</h4><br>
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+    <div class="row">
+            
+            <div class="col-sm-6">
+                    <input type=file name=file class="form-control">
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-6">
+                 <input type=submit value=Upload class="btn btn-success">
+                </div>
+                <div class="col-sm-1">
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                  
+                    <div class="col-sm-6">
+                            <p style="color: blue">*Note: Please upload .csv file only.</p>
+                            <p style="color:red">**Mandatory: Please recheck the feature columns before uploading the portfolio</p>
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                </div>
+    
+    </form>
+    </div>
+   
+</body>
+</html>

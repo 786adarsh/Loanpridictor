@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Predict Loan Defualt Risk</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/static/css/style.css">
+      
+</head>
+<body>
+    
+
+    <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="..\static\p4.jpg" alt="SB" height="130" width="400" >
+        </div>
+        <br>
+                <div class="col-sm-6">
+                        <H1><center><b>Loan Prediction Result</b></center></H1>
+                        
+                        <br>
+                </div>
+                <div class="col-sm-2">
+                </div>
+                </div>
+                <div class="row">
+                    <nav class="navbar navbar-inverse "> 
+                        <div role="navigation"> 
+                          <div class="container"> 
+                            <div class="navbar-header"> 
+                              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse"> 
+                                <span class="sr-only">Toggle navigation</span> 
+                                <span class="icon-bar"></span> 
+                                <span class="icon-bar"></span> 
+                                <span class="icon-bar"></span> 
+                              </button> 
+                              <a href="#" class="navbar-brand"></a> 
+                            </div> 
+                            <div class="navbar-collapse collapse"> 
+                              <ul class="nav navbar-nav navbar-right"> 
+                                  <li ><a href="#"></a></li> 
+                                  <li> <a href="#"></a> </li> 
+                                  <li><a href="#"></a> </li> 
+                              </ul> 
+                            </div> 
+                          </div> 
+                            
+                        </div> 
+                        </nav> 
+                    </div>
+                    
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Kudos !! Here we got your prediction!! :)</h3>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3 style="color: green";>Percentage of Good Loans:<i> ({{ '%0.2f'| format(good_lo|float) }}%)</i> </h3>
+                <h3 style="color:red";>Percentage of Bad Loans:<i> ({{ '%0.2f'| format(bad_lo) }}%)</i></h3>
+            </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-sm-2">
+
+          </div>
+          <div class="col-sm-2">
+            <div id="piechart"></div>
+        
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            
+            <script type="text/javascript">
+            // Load google charts
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+            
+            // Draw the chart and set the chart values
+            function drawChart() {
+              var data = google.visualization.arrayToDataTable([
+              ['Loan Condition', 'Hours per Day'],
+              ['Good Loan', {{good_lo}}],
+              ['Bad Loan', {{bad_lo}}]
+            ]);
+            
+              // Optional; add a title and set the width and height of the chart
+              var options = {'title':'Information of Loan Condition','width':800, 'height':600};
+          
+              // Display the chart inside the <div> element with id="piechart"
+              var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+              chart.draw(data, options);
+            }
+            </script>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4">
+                  </div>
+          <div class="col-sm-8">
+          
+          <input type="button" class="btn btn-primary" onclick="goBack()" value="Click to Predict Another Loan Portfolio ">
+
+            <script>
+        function goBack() {
+          window.history.back();
+        }
+        </script>
+        </div>
+        </div>
+</div>
+        
+</body>
+
+
+</html>
